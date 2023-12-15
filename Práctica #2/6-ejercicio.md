@@ -14,7 +14,7 @@ docker run -d --name server-mysql -e MYSQL_ROOT_PASSWORD=12345 -e MYSQL_DATABASE
 
 ```
 
-### Crear contenedor de Wordpress
+### Crear contenedor de Wordpress 
 
 ```
 
