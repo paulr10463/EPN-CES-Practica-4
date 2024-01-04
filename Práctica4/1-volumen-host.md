@@ -18,21 +18,21 @@ docker run -d --name nginx-4 --publish 8080:80 -v C:\Users\"Paul Roman"\Desktop\
 
 
 ### ¿Qué sucede al ingresar al servidor de nginx?
-Se muestra la pantallde inicio de nginx que indica la correcta instalación del mismo. 
-![nginx welcome](assets/nginxWelcome.png "Figura 0k")
+Se muestra la pantalla de error 403 Forbidden, debido a que no existe nada dentro de la carpeta html.
+![403 Forbidden](assets/403Forbidden.png)
 
 ### ¿Qué pasa con el archivo index.html del contenedor?
-Este archivo contiene el html del mensaje de bienvenida visto previamente. 
+Todo contenido presente en la carpeta html del host se verá reflejado en el html del contenedor, por ende al tener una carpeta vacía, no se dispondrá de un archivo index.html. 
 
 ### Ir a https://html5up.net/ y descargar un template gratuito - descomprimir en la carpeta html
 ### ¿Qué sucede al ingresar al servidor de nginx?
 Al ingresar al localhost en el puerto 8080 se visualiza la plantilla colocada en el directorio del entorno local. 
 
-![Alt text](image-1.png)
+![Template](assets/template.png)
 
 De igual manera, ingresando al contenedor via bash se pudo apreciar que se tiene la misma información en las 2 carpertas.
 
-![Alt text](image.png)
+![Alt text](assets/containerDir.png)
 
 ### Eliminar el contenedor
 Se emplea el siguiente comando para eliminar el contenedor: 

@@ -37,7 +37,6 @@ Este paso nos conducirá al directorio donde los datos del volumen están almace
 
 ```
 docker network create postgres-net
-
 ```
 
 ### Servidor postgres usando el volumen nombrado
@@ -47,6 +46,6 @@ docker run -d --name server-postgres -e POSTGRES_DB=postgres-db -e POSTGRES_PASS
 ```
 
 ### ¿Qué ha sucedido en vol-postgres?
-Al instanciar el contenedor de PostgreSQL utilizando el volumen llamado "vol-postgres", se ha realizado la inicialización de la base de datos en el directorio /var/lib/postgresql/data del contenedor. Este directorio ha sido sincronizado con el directorio correspondiente al punto de montaje del volumen en el host. Esta sincronización implica que los datos de la base de datos se almacenan tanto en el contenedor como en el host, y cualquier modificación realizada en uno de ellos se reflejará en el otro. Esta configuración posibilita la persistencia de la información incluso si el contenedor es eliminado o reiniciado, ya que el volumen no está vinculado al ciclo de vida del contenedor.
+Al instanciar el contenedor de PostgreSQL utilizando el volumen llamado "vol-postgres", se ha realizado la inicialización de la base de datos en el directorio /var/lib/postgresql/data del contenedor. Este directorio ha sido sincronizado con el directorio correspondiente al punto de montaje del volumen en el host. 
 
-
+Esta sincronización implica que los datos de la base de datos se almacenan tanto en el contenedor como en el host, y cualquier modificación realizada en uno de ellos se reflejará en el otro. Esta configuración brinda persistencia de información incluso si el contenedor es eliminado dado que no está vinculado al ciclo de vida del contenedor.
